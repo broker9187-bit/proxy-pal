@@ -46,11 +46,11 @@ const Index = () => {
 
   const handleProxySubmit = (url: string) => {
     setIsLoading(true);
-    // Simulate connection delay
+    // Quick connection
     setTimeout(() => {
       setIsLoading(false);
       setActiveUrl(url);
-    }, 2000);
+    }, 500);
   };
 
   return (
@@ -67,22 +67,19 @@ const Index = () => {
       <div className="relative z-10 container mx-auto px-4 py-12 md:py-20">
         {/* Header */}
         <header className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-primary/30 mb-6">
-            <div className="w-2 h-2 rounded-full bg-cyber-green animate-pulse" />
-            <span className="text-xs font-mono text-primary uppercase tracking-wider">Secure Connection Ready</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/5 border border-primary/20 mb-8">
+            <div className="w-1.5 h-1.5 rounded-full bg-cyber-green animate-pulse" />
+            <span className="text-[10px] font-mono text-primary/80 uppercase tracking-[0.2em]">Secure</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="text-foreground">Browse the Web</span>
-            <br />
-            <span className="text-glow bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Anonymously
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-tight">
+            <span className="text-glow bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%] animate-gradient">
+              Trickery
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Access any website securely and privately. Your identity stays hidden with our
-            military-grade encryption and global proxy network.
+          <p className="text-base md:text-lg text-muted-foreground/80 max-w-md mx-auto leading-relaxed font-light">
+            Browse anywhere. Stay invisible.
           </p>
         </header>
 
@@ -107,7 +104,7 @@ const Index = () => {
         {/* Features */}
         <section>
           <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-12">
-            Why Choose <span className="text-primary text-glow">SecureProxy</span>?
+            Why Choose <span className="text-primary text-glow">Trickery</span>?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
@@ -124,8 +121,8 @@ const Index = () => {
 
         {/* Footer */}
         <footer className="mt-20 text-center">
-          <p className="text-sm text-muted-foreground font-mono">
-            © 2024 SecureProxy • Privacy First • Always Encrypted
+          <p className="text-sm text-muted-foreground font-mono tracking-wider">
+            © 2024 Trickery • Privacy First • Always Encrypted
           </p>
         </footer>
       </div>

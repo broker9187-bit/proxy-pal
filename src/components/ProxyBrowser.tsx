@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft, RotateCcw, X, ExternalLink, Lock, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -12,6 +12,11 @@ interface ProxyBrowserProps {
 const ProxyBrowser = ({ url, onClose }: ProxyBrowserProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 300);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(url);
