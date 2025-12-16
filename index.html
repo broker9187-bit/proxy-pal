@@ -1,27 +1,50 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trickery - Browse Invisible</title>
-    <meta name="description" content="Browse anywhere. Stay invisible. Military-grade encryption meets sleek design." />
-    <meta name="author" content="Trickery" />
-    <meta name="keywords" content="proxy, web proxy, anonymous browsing, secure browsing, VPN alternative, privacy, trickery" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trickery - Browse Invisible</title>
+        <meta name="description" content="Browse anywhere. Stay invisible. Military-grade encryption meets sleek design." />
+    <meta name="author" content="Trickery" />
+    <meta name="keywords" content="proxy, web proxy, anonymous browsing, secure browsing, VPN alternative, privacy, trickery" />
 
-    <meta property="og:title" content="Trickery - Browse Invisible" />
-    <meta property="og:description" content="Browse anywhere. Stay invisible. Military-grade encryption meets sleek design." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:title" content="Trickery - Browse Invisible" />
+    <meta property="og:description" content="Browse anywhere. Stay invisible. Military-grade encryption meets sleek design." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Trickery" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <link rel="canonical" href="https://trickery.app" />
-  </head>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Trickery" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="canonical" href="https://trickery.app" />
+  </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <body>
+    <header style="padding: 20px; text-align: center;">
+        <h1>Trickery - Browse Invisible</h1>
+        <p>Enter a URL or search query to browse privately.</p>
+    </header>
+
+    <div style="display: flex; justify-content: center; padding: 20px;">
+        <form action="/" method="POST" style="width: 100%; max-width: 600px;">
+            <input 
+                type="text" 
+                name="query" 
+                placeholder="Enter URL or search query..." 
+                required 
+                style="width: 80%; padding: 10px; border: 1px solid #ccc; border-radius: 4px 0 0 4px;"
+            />
+            <button 
+                type="submit" 
+                style="width: 20%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 0 4px 4px 0; cursor: pointer;"
+            >
+                Go!
+            </button>
+        </form>
+    </div>
+
+        <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
